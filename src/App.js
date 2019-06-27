@@ -65,6 +65,9 @@ class App extends Component {
     return (
       <div className="App">
         <h3>Perss this button to see Changes</h3>
+        <p>
+          This project is based on React.js and this project is for learning
+        </p>
         <button style={btnStyle} onClick={this.toggleCardHanler}>
           Change
         </button>
