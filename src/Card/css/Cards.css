@@ -1,0 +1,19 @@
+.Card {
+  height: auto;
+  margin: 15px;
+  padding: 5px;
+  background-color: rgb(240, 240, 240);
+  color: #666;
+}
+.Card-header {
+  font-size: 20px;
+  padding: 5px;
+  font-weight: normal;
+  color: rgb(82, 82, 82);
+}
+.Card-body {
+  font-size: 16px;
+  padding: 5px;
+  font-weight: normal;
+  color: rgb(26, 26, 26);
+}
