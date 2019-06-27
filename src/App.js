@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
-
+import cssclass from "./App.css";
 import Cards from "./Card/Cards";
 
 class App extends Component {
@@ -63,7 +62,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className={cssclass.App}>
         <h3>Perss this button to see Changes</h3>
         <p>
           This project is based on React.js and this project is for learning and
