@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import cssclass from "./App.css";
-import Cards from "./Card/Cards";
+import Cards from "../components/Card/Cards";
 
 class App extends Component {
   state = {
@@ -36,12 +36,7 @@ class App extends Component {
   };
 
   render() {
-    const btnStyle = {
-      padding: "6px",
-      backgroundColor: "rgb(82, 167, 103)",
-      color: "aliceblue",
-      cursor: "pointer"
-    };
+    let btnStyle = cssclass.btn;
 
     let Card = null;
     if (this.state.showCard) {
@@ -58,7 +53,7 @@ class App extends Component {
           })}
         </div>
       );
-      btnStyle.backgroundColor = "darkred";
+      btnStyle = cssclass.btnRed;
     }
 
     return (
@@ -68,7 +63,7 @@ class App extends Component {
           This project is based on React.js and this project is for learning and
           practiceing
         </p>
-        <button style={btnStyle} onClick={this.toggleCardHanler}>
+        <button className={btnStyle} onClick={this.toggleCardHanler}>
           Change
         </button>
         {Card}
