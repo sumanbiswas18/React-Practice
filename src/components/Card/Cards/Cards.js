@@ -1,6 +1,5 @@
 import React from "react";
-import cssClasses from "./css/Cards.css";
-
+import cssClasses from "../css/Cards.css";
 const Cards = props => {
   return (
     <div className={cssClasses.Card}>

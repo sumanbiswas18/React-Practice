@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import cssclass from "./App.css";
-import Cards from "../components/Card/Cards";
+import FunCard from "../components/Card/Card";
+import Cockpit from "../components/Cockpit/Cockpit";
 
 class App extends Component {
   state = {
@@ -36,36 +37,21 @@ class App extends Component {
   };
 
   render() {
-    let btnStyle = cssclass.btn;
-
     let Card = null;
     if (this.state.showCard) {
       Card = (
         <div>
-          {this.state.Card.map(card => {
-            return (
-              <Cards
-                name={card.name}
-                key={card.id}
-                changed={event => this.nameChangeHandler(event, card.id)}
-              />
-            );
-          })}
+          <FunCard cards={this.state.Card} changed={this.nameChangeHandler} />
         </div>
       );
-      btnStyle = cssclass.btnRed;
     }
 
     return (
       <div className={cssclass.App}>
-        <h3>Perss this button to see Changes</h3>
-        <p>
-          This project is based on React.js and this project is for learning and
-          practiceing
-        </p>
-        <button className={btnStyle} onClick={this.toggleCardHanler}>
-          Change
-        </button>
+        <Cockpit
+          showCard={this.state.showCard}
+          toggle={this.toggleCardHanler}
+        />
         {Card}
       </div>
     );

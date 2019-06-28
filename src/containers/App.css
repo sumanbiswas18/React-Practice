@@ -1,26 +1,3 @@
 .App {
   text-align: center;
 }
-
-.btn {
-  border: 2px solid blueviolet;
-  padding: 8px 10px;
-  background-color: green;
-  color: aliceblue;
-}
-.btn:hover {
-  cursor: pointer;
-  background-color: lightgreen;
-  color: black;
-}
-.btnRed {
-  border: 2px solid blueviolet;
-  padding: 8px 10px;
-  background-color: brown;
-  color: aliceblue;
-}
-.btnRed:hover {
-  cursor: pointer;
-  background-color: indianred;
-  color: black;
-}
