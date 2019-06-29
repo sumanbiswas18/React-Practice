@@ -1,6 +1,7 @@
 import React from "react";
 import cssClasses from "../css/Cards.css";
 const Cards = props => {
+  console.log("[Cards.js] Rendering.......");
   return (
     <div className={cssClasses.Card}>
       <div className={cssClasses.CardHeader}>

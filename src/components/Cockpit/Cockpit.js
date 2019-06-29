@@ -10,7 +10,7 @@ const cockpit = props => {
 
   return (
     <div>
-      <h3>Perss this button to see Changes</h3>
+      <h3>{props.title}</h3>
       <p>
         This project is based on React.js and this project is for learning and
         practiceing

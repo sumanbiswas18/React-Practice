@@ -4,6 +4,13 @@ import FunCard from "../components/Card/Card";
 import Cockpit from "../components/Cockpit/Cockpit";
 
 class App extends Component {
+  // calling constructor
+  constructor(props) {
+    super(props);
+    console.log("[App.js] constructor.... ");
+  }
+
+  // setting state
   state = {
     Card: [
       { id: 1, name: "sanu" },
@@ -13,6 +20,13 @@ class App extends Component {
     showCard: false
   };
 
+  static getDriveStateFromProps(props, state) {
+    console.log("[App.js] getDriveStateFromProps...", props);
+    return state;
+  }
+  componentDidMount() {
+    console.log("[App.js] compinentDidMount....");
+  }
   toggleCardHanler = () => {
     const cardShow = this.state.showCard;
     this.setState({
@@ -37,6 +51,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("[App.js] Rendering.....");
     let Card = null;
     if (this.state.showCard) {
       Card = (
@@ -49,6 +64,7 @@ class App extends Component {
     return (
       <div className={cssclass.App}>
         <Cockpit
+          title={this.props.title}
           showCard={this.state.showCard}
           toggle={this.toggleCardHanler}
         />
