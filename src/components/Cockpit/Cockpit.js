@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import css from "./Cockpit.css";
 
-const cockpit = props => {
+const Cockpit = props => {
+  useEffect(() => {
+    console.log("[Cockpit.js] useeffect...");
+    setTimeout(() => {
+      alert("your data saved");
+    }, 1000);
+  }, [props.Card]);
+
   let btnStyle = css.btn;
 
   if (props.showCard) {
@@ -22,4 +29,4 @@ const cockpit = props => {
   );
 };
 
-export default cockpit;
+export default Cockpit;
